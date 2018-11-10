@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <context:annotation-config>
+
+    </context:annotation-config>
+
+    <context:property-placeholder location="student.properties"></context:property-placeholder>
+
+    <bean id ="stu" class = "com.example.demo.Student">
+        <!--<property name="name" value="${student.name}"></property>-->
+        <property name="hobby" value="${student.hobby}"></property>
+        <property name="subject" value="${student.subject}"></property>
+
+    </bean>
+
+    <bean id ="room" class = "com.example.demo.Classroom">
+
+    </bean>
+
+
+</beans>
